@@ -187,6 +187,8 @@ export function mountComponent (
     }
   } else {
     updateComponent = () => {
+      // _render 函数是调用 用户传入的 render 或者编译出来的 render 函数，生成虚拟dom
+      // _update 函数是将虚拟dom 挂载到真实 dom 上
       vm._update(vm._render(), hydrating)
     }
   }

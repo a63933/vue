@@ -68,9 +68,15 @@ export function initGlobalAPI (Vue: GlobalAPI) {
   // 设置 keep-alive 组件
   extend(Vue.options.components, builtInComponents)
 
-  // Vue.use 方法
+  // 注册 Vue.use 方法
   initUse(Vue)
+
+  // 注册 Vue.mixin 方法
   initMixin(Vue)
+
+  // 注册 Vue.extend 方法
   initExtend(Vue)
+
+  // 注册 Vue.directive、 Vue.component、Vue.filter
   initAssetRegisters(Vue)
 }

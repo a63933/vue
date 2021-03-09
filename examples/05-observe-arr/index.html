@@ -15,11 +15,11 @@
     const vm = new Vue({
       el: '#app',
       data: {
-        arr: [2, 3, 5]
+        arr: [{a:2}, 3, 5]
       }
     })
 
-    // vm.arr.push(8)
+    // vm.arr.push(8)  会触发 dep 的 notify 方法
     // vm.arr[0] = 100
     // vm.arr.length = 0
     
